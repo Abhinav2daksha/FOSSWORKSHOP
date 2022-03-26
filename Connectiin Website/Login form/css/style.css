@@ -1,0 +1,33 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wrapper{
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+}
+.topnav{
+	color: #000;
+	background-color: #fff;
+}
+.container-fluid {
+	background: linear-gradient(180deg, darkblue 0%, 100%);
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+li{
+ text-decoration: none;
+ align-items: right;
+ display: inline-block;
+}
+a:hover, a:active {
+	color: black;
+  }

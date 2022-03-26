@@ -1,0 +1,128 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Connectsin Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--css link-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--font awesome cdn-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+       <!--bootstrap link-->
+	   <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+
+    <body>
+        <nav class="navbar  navbar-expand-lg navbar- ">
+            <div class="container-fluid " style="width: 100%; background-color:rgb(1, 1, 78)">
+                <div class="col-lg-8 col-md-4 col-sm-4"
+                    style="margin-top: 20px;padding: left 20px; padding-bottom: 20px;">
+                    <a href="#" class="logo"><img src="./images/assets/logo.png"></a>
+                </div>
+                <div class="col-lg-12 col-sm-12" style="padding-left: 200px;">
+                    <a class="login" href="index.html" style="color: #fff;text-decoration: none;">Login </a>/
+                    <a class="Login" href="recruiter.html" style="color: #fff;text-decoration: none;">Employer Login</a>
+                </div>
+        </nav>
+
+        <div class="container" style="margin:50px">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class=" text-center" style="padding-right: 50px 50px;">
+                        <p style="font-size">Connectsin is a Global Social Networking, Professional <br> platform and where users share and connect with Job.</p>
+                    </div>
+                    <br><br>
+                    <img src="./images/assets/sigup globe.jpeg" style="margin-left: 50px;padding-left: 50px;">
+                    <div class="text-center" style="padding-bottom:20px;padding-top: 20px;">
+                        <a href="#" class="copyright mb-3" style="color: #000;text-decoration: none;">Connectiin @2020</a>
+                    </div>
+                    <hr style="background-color:blue;">
+                    <section>
+                        <ul class="navbar"
+                            style="font-size: x-small;text-align: center;padding-left: 20px;margin-left: 20px;">
+                            <a href="#" style="text-decoration: none; color:black">User Agreement</a>
+                            <a href="#" style="text-decoration: none; color:black">Privacy Policy</a>
+                            <a href="#" style="text-decoration: none; color:black">Community Guidelines</a>
+                            <a href="#" style="text-decoration: none; color:black">Help Center</a>
+                            <a href="#" style="text-decoration: none; color:black">Copyright Policy</a>
+                            <a href="#" style="text-decoration: none; color:black">Languages</a>
+                        </ul>
+                    </section>
+                </div>
+                <!---login form---->
+                <div class="col-lg-6">
+                    <h4>Sign Up</h4>
+                    <div class="input-group mb-3  mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="username" style="color: #fff;">
+                                <i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                    </div>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="Email" style="color: #fff;" aria-label="email" re>
+                                <i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="password" style="color: #fff;"
+                                aria-label="Enter password ">
+                                <i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter password" aria-label="password"
+                            required>
+                    </div>
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="Confirm password" style="color: #fff;">
+                                <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Confirm password"
+                            aria-label="Confirm password" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="calender" style="color: #fff;">
+                                        <i class="fa fa-calendar-times-o"></i></span>
+                                    <input type="text" class="form-control" placeholder="DD/MM/YY" aria-label="date"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <select class="custom-select" id="Gender">
+
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <small> Yes, I understand and agree to the connectInn </small><br>
+                        <input type="radio" id="radio" checked="checked" required">
+                        <a href="#" style="color: black; text-decoration: none;">Terms & Conditions.</a>
+                        <h5 style="font-size: small;">You will receive Email on Registered Email Id for verification</h5>
+                        <hr style="background-color: blue;">
+                        <button class="btn-lg btn-primary"  style="color: white; background-color:darkblue;padding-left: 50px;padding-right: 50px;">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="./js/bootstrap.js"></script>
+    <script src="./js/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/popper.js"></script>    
+</body>
+
+    </html>
