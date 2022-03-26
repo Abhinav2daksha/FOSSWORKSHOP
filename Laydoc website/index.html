@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="charset=utf-8">
+
+    <title>Ladydoc</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.ladydoc.in/favicon-32x32.png" sizes="32x32" type="image/png">
+
+
+
+    <link href="css/app.bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        textarea {
+            width: 100%;
+            resize: vertical;
+            max-height: 250px;
+            min-height: 100px;
+        }
+    </style>
+    <script>
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+    <!-- <script>
+        function switchVisible() {
+            var User = '';
+            if (User === "") {  //no value
+                var question = $.trim($("#askMessage").val());
+                $.ajax({
+                    type: 'POST',
+                    url: "https://www.ladydoc.in/set_question",
+                    data: { _token: 'hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn', 'question': question, }
+                })
+                    .done(function (data) {
+                        alert('Please Sign Or Register in to Continue');
+                        $('#customerlogin').modal('show');
+                    })
+                    .fail(function () {
+                        // just in case posting your form failed
+                        alert("Posting failed.");
+                    });
+                // to prevent refreshing the whole page page
+                return false;
+            }
+            else {
+                alert('value');
+                document.getElementById('Div2').style.display = 'block';
+            }
+        }
+    </script>
+    <style>
+        .tab-content {
+            padding: 15px;
+        }
+
+        .form-group {
+            /* margin-bottom: 26px;
+    padding-bottom: 15px;*/
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <div class="top-area" style="padding: 3px 6px 4px 4px;background: #F8C5DE;">
+        <div class="container">
+            <div class="col-sm-12 ">
+                <div class="col-lg-10 col-md-10 col-sm-10 pull-right">
+                    <ul class="">
+                        <li style="text-align: left; left:-176px; position: relative;">
+                            <a style="color:blue;">1 Point = 1 INR</a>
+                        </li>
+                        <li style="text-align: left; left:-177px; position: relative;">
+                            <span style="padding-right:5px">
+                                <img src='images/android.png'></span>
+                            <a class="pointer"
+                                href="https://play.google.com/store/apps/details?id=com.lady.doc.app&hl=en"
+                                target="_blank">Download App</a>
+                        </li>
+                        <!-- <li style="text-align: right; left:176px; position: relative;"><a>|</a></li> -->
+                        <!--li><a class="pointer" data-toggle="modal" data-target="#vendorlogin">Partner</a></li-->
+                        <li style="text-align: right; left:340px; position: relative;">
+                            <a href="#">Partner</a>
+                        </li>
+                        <li style="text-align: right; left:340px; position: relative;"><a>|</a></li>
+                        <li style="text-align: right; left:340px; position: relative;">
+                            <a href="#" data-target="#doctorlogin">Doctor</a>
+                        </li>
+                        <li style="text-align: right; left:340px; position: relative;"><a>|</a></li>
+                        <li style="text-align: right; left:340px; position: relative;">
+                            <a href="https://www.ladydoc.in/career">Career</a>
+                        </li>
+                        <li style="text-align: right; left:340px; position: relative;"><a>|</a></li>
+                        <li style="text-align: right; left:340px; position: relative;">
+                            <a href="investors">Investors</a>
+                        </li>
+                        <li style="text-align: right; left:340px; position: relative;"><a>|</a></li>
+                        <li style="text-align: right; left:340px; position: relative;">
+                            <a href="mentoradvisor">Mentor & Advisor</a>
+                        </li>
+
+                        <li class="hidden-sm hidden-md hidden-lg"><a>|</a></li>
+                        <li class="hidden-sm hidden-md hidden-lg"><a class="pointer" data-toggle="modal"
+                                data-target="#customerlogin"> Login </a></li>
+                        <li class="hidden-sm hidden-md hidden-lg"><a>|</a></li>
+                        <li class="hidden-sm hidden-md hidden-lg"><a class="pointer last" data-toggle="modal"
+                                data-target="#customerregister"> Register </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="navbar navbar-default navbar-fixed-top">-->
+    <div class="navbar navbar-default navbar-default">
+        <div class="container">
+            <div class="col-sm-3">
+                <div class="navbar-header">
+                    <div>
+                        <a class="navbar-brand" href="/">
+                            <img src="images/logo.png" alt="ladyDoc" class="logo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="col-sm-6 col-xs-8 pad0">
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="nav"><a href="https://www.ladydoc.in/searchclinic">Search Clinic</a></li>
+                        <li class="nav"><a href="https://www.ladydoc.in/labtest">Lab Tests</a></li>
+                        <li class="nav"><a href="https://www.ladydoc.in/article">Article</a></li>
+                        <li class="nav"><a href="https://www.ladydoc.in/offers">Offers</a></li>
+                        <li class="nav"><a href="https://www.ladydoc.in/faq">FAQ</a></li>
+                        <li class="nav"><a href="https://www.ladydoc.in/contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-3">
+                <ul class="" style="float:right; text-align:right; margin-top:35px;">
+                    <li style="float: left;  padding-right: 10px;">
+                        <a class="pointer" data-toggle="modal" data-target="#customerlogin"> Login </a>
+                    </li>
+                    <li style="float: left;  padding-right: 10px;"><a>|</a></li>
+                    <li style="float: left;  padding-right: 10px;"><a class="pointer last" data-toggle="modal"
+                            data-target="#customerregister"> Register </a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="outer-bg"
+        style="background-repeat: no-repeat; background-size: cover; background-position: top right; ">
+
+        <div class="myriadpro-light">
+
+            <div class="ask-question-page__upper-section" id="inquiry_ajax" ng-style="ctrl.style">
+
+
+                <div class="container grid" id="Div1">
+                    <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                        <h1 class="ask-question-page__header Doctors">Get brief answers for your health queries from top
+                            Doctors. Its <strong>FREE!</strong></h1>
+                        <div
+                            class="ask-question-page__upper-section__ask-box grid__col-20 grid--direction-column lybShadow--depth-2 lybGutter">
+                            <!--form name="question_post" method="post"-->
+                            <div class="lybText--darkest lybText--small lybText--bolder lybMar-top-btm">
+                                What is your question?
+                            </div>
+                            <div card="" class="ask-question-page__upper-section__ask-box__textarea lybGutter--half">
+
+                                <textarea name="question_text" id="askMessage"
+                                    placeholder="Enter question for you or someone else. For e.g. I am 25 year old Female and have backache for last 2 months. I have used pain relief ointment cream for couple of days but haven't got any relief. What should I do now? "
+                                    columns="1" rows="5" ng-required="true" ng-model="askMessage" value=""
+                                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                                    required="required"></textarea>
+                            </div>
+                            <div>
+                                <span class="help-inline"
+                                    ng-show='question_post.question_text.$invalid && question_post.question_text.$touched'>
+                                    Question is required </span>
+                                <button class="btn primary raised grid__col-20 lybText--medium lybPad-top-btm--quar"
+                                    id="btn-save" onclick="switchVisible();" ng-disabled="question_post.$invalid">Ask
+                                    FREE Question Securely</button>
+                            </div>
+                            </form>
+                            <div
+                                class="grid__col-20 underBoxLbl grid--justify-center lybMar-top lybText--small lybText--dark">
+                                Complete privacy and anonymity guaranteed & Quick responses
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                        <h1 style="height:75px;" class="ask-question-page__header Doctors">
+                            <img class="image" width="50" src='images/statescope.png'>&nbsp; &nbsp;Search Clinic
+                        </h1>
+                        <div class="ask-question-page__upper-section__ask-box grid__col-20 grid--direction-column lybShadow--depth-2 lybGutter a-gynaecologist"
+                            style="position:relative; height:285px">
+
+                            <form class="form-inline" action="https://www.ladydoc.in/doctorsearch" autocomplete="off"
+                                style="position:absolute; bottom:30%;">
+                                <input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+                                <div class="form-group">
+                                    <select class="form-control has-error" id="cityidsearch" name="searchcity" required>
+                                        <option value="">Select City</option>
+                                        <option value="1">Pune</option>
+                                        <option value="2">Mumbai</option>
+                                        <option value="4">Jamshedpur</option>
+                                        <option value="5">Delhi NCR</option>
+                                        >
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control has-error" id="searchlocalitydoctor"
+                                        name="searchlocality" required>
+                                        <option value="">Select Locality</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select required class="form-control has-error" name="searchspeciality"
+                                        id="searchspeciality" placeholder="search a speciality">
+                                        <option>Select Speciality</option>
+
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+
+    <div class="">
+        <div class="container">
+            <div class="row colour-grid">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+                    <h3 style="padding-top:20px;">Why Use LadyDoc<br /> </h3>
+                </div>
+                <div class="col-sm-12 ">
+                    <div class="col-sm-3 col-lg-3 text-center">
+                        <img src="./images/ic_doctor.png" class="img-responsive center-block mar-top30" alt="Theme" />
+                        <div class="d-title">Verified doctors</div>
+                        <div class="d-text">All doctors on LadyDoc go <br>through a stringent <br>verification process
+                        </div>
+                    </div>
+                    <div class="visible-xs-block"><br /></div>
+                    <div class="col-sm-3 col-lg-3 text-center">
+                        <img src="./images/ic_heart.png" class="img-responsive center-block mar-top30" alt="Events" />
+                        <div class="d-title">
+                            24*7 access to healthcare
+                        </div>
+                        <div class="d-text">
+                            Easy access to the best<br>
+                            doctors anytime,<br>
+                            anywhere
+                        </div>
+                    </div>
+                    <div class="visible-xs-block"><br /></div>
+                    <div class="col-sm-3 col-lg-3 text-center">
+                        <img src="./images/Time-Money.png" class="img-responsive center-block mar-top30"
+                            alt="Resources" />
+                        <div class="d-title">
+                            Save time &amp; money
+                        </div>
+                        <div class="d-text">
+                            Save upto 70% in time<br>
+                            and money spent for<br>
+                            consultation
+                        </div>
+                    </div>
+                    <div class="visible-xs-block"><br /></div>
+                    <div class="col-sm-3 col-lg-3 text-center">
+                        <img src="./images/care.png" class="img-responsive center-block mar-top30" alt="Resources" />
+                        <div class="d-title">
+                            100% care guaranteed
+                        </div>
+                        <div class="d-text">
+                            We'll refund your money if<br>
+                            you're not satisfied with<br>
+                            our service
+                        </div>
+                    </div>
+                    <div class="visible-xs-block"><br /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg1">
+        <div class="container ">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+                <h3>Top Categories</h3>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 a-topCategories" style="text-align:center">
+                    <a class="d-unit a-dietician" href="#">
+                        <div class="d-title">Dietitian/Nutritionist</div>
+                    </a>
+                    <a class="d-unit a-gynaecologist" href="#">
+                        <div class="d-title">Gynaecologist</div>
+                    </a>
+                    <a class="d-unit a-psychologist" href="#">
+                        <div class="d-title">Psychologist</div>
+                    </a>
+                    <a class="d-unit a-ayurveda" href="#">
+                        <div class="d-title">Ayurveda</div>
+                    </a>
+                    <a class="d-unit a-homeopath" href="#">
+                        <div class="d-title">Homeopath</div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container ">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+            <h3>Top Discount Offer</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left vertical-text">
+
+                    <li class="active">
+                        <a href="#5" data-toggle="tab">Medical Cosmetology</a>
+                    </li>
+
+                    <li>
+                        <a href="#6" data-toggle="tab">Ayurveda</a>
+                    </li>
+
+                    <li>
+                        <a href="#9" data-toggle="tab">Women Gym</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+
+
+                    <div class="tab-pane fade in active" id="5">
+
+                        <div class="col-sm-12">
+                            <h3> No Offer in this category</h3>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="6">
+
+                        <div class="col-sm-12">
+                            <h3> No Offer in this category</h3>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="9">
+
+                        <div class="col-sm-12">
+                            <h3> No Offer in this category</h3>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg1">
+        <div class="container">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+                <h3>Top Labs Offer</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="padding: 0px 0 20px 45px;">
+                    <h3> No Offer in this category</h3>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 footer-top">
+                    <div class="col-sm-4">
+                        <h4>Important Links</h4>
+                        <ul>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/press">Press</a></li>
+                            <li><a href="/terms&condition">Terms of Use</a></li>
+                            <li><a href="/privacypolicy0">Privacy Policy</a></li>
+                            <li><a href="/disclaimer0">Legal Disclaimer</a></li>
+                            <li><a href="/career">Careers</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Newsletter Subscription</h4>
+                        <div id="msg" style="color:green;"></div>
+                        <form method="post" action="" id="cform">
+                            <input type="hidden" id="token" name="token"
+                                value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+                            <div style="padding-bottom: 18px;">NAME<span style="color: red;"> *</span><br />
+                                <input type="text" id="data_2" name="data_2" style="width : 300px;"
+                                    class="form-control" />
+                                <span id="nameerror" style="color: red;"></span>
+                            </div>
+                            <div style="padding-bottom: 18px;">EMAIL<span style="color: red;"> *</span><br />
+                                <input type="text" id="data_4" name="data_4" style="width : 300px;"
+                                    class="form-control" />
+                                <span id="emailerror" style="color: red;"></span>
+                            </div>
+                            <div style="padding-bottom: 18px;"><input class="btn primary" value="SUBSCRIBE"
+                                    type="button" onclick="subscription();" /></div>
+
+
+                        </form>
+
+
+
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Be Social</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com" target="_blank">
+                                    <span style="padding-right:5px">
+                                        <img src='images/facebook.png'></span>Facebook</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank">
+                                    <span style="padding-right:5px">
+                                        <img src='images/twitter.png'></span>Twitter</a></li>
+                            <li><a href="https://www.linkedin.com/in" target="_blank"><span
+                                        style="padding-right:5px"><img src='images/linkedin.png'></span>Linkedin</a>
+                            </li>
+                            <li></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td align="center">LadyDoc Global Healthcare Pvt. Ltd. Copyright @ 2022. All rights reserved.</td>
+
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <script>
+
+        function switchVisible1() {
+            var User = '';
+
+
+            if (User === "") {  //no value
+                alert('Please Sign Or Register in to Continue');
+                //  document.getElementById("demo1").innerHTML = Quest;
+
+                $('#customerlogin').modal('show');
+            }
+            else {
+                alert('value');
+                document.getElementById('Div2').style.display = 'block';
+
+            }
+        }
+        function switchdoctor() {
+            var User = '';
+
+            if (User === "") {  //no value
+                alert('Please Sign Or Register in to Continue');
+                //  document.getElementById("demo1").innerHTML = Quest;
+
+                $('#customerlogin').modal('show');
+            }
+            else {
+                alert('value');
+                document.getElementById('Div2').style.display = 'block';
+            }
+        }
+    </script>
+
+    <div id="whatsthis" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LadyDoc Offer</h4>
+
+                </div>
+                <div class="modal-body">
+                    <h5>On Successfull Transaction Ladydoc will add 10 points to your wallet </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+    <!-- Modal customerlogin start-->
+    <div id="customerlogin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LadyDoc Sig In</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="https://www.ladydoc.in/login" aria-label="Login">
+                        <input type="file" name="_token" value="hidden">
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="" required
+                                    autofocus>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-10 offset-md-4">
+                                <button type="submit" class="btn primary pull-right">
+                                    Login
+                                </button>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember">
+
+                                    <label class="form-check-label" for="remember">
+                                        Remember Me
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <a class="" href="https://www.ladydoc.in/password/reset">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Don't have a profile? <a class="pointer" data-toggle="modal" data-dismiss="modal"
+                                        data-target="#customerregister">Register</a></p>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="clear-all"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="customerregister" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ladydoc Registration</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" method="POST" action="https://www.ladydoc.in/register">
+
+                        <!--  <input type="hidden" name="token" value="<input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">">-->
+                        <input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="name" value="">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-4 control-label">Phone Number</label>
+
+                            <div class="col-md-6">
+                                <input id="phonenumber" type="text" class="form-control" name="phonenumber" value="">
+
+                            </div>
+                        </div>
+                        <input type="hidden" value="customer" name="role">
+                        <div class="form-group">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control"
+                                    name="password_confirmation">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <div class="clear-all"></div>
+                    <p></p>
+                    <div class="clear-all"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal customerregister end -->
+    <!-- Modal vendorlogin start -->
+    <div id="vendorlogin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LadyDoc Vendor Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#vlogin">Log In</a></li>
+                        <li><a data-toggle="tab" href="#vregister">Register</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="login" class="tab-pane fade in active"><br />
+                            <form method="POST" action="https://www.ladydoc.in/login" aria-label="Login">
+
+
+                                <!-- <form method="POST" action="vendorlogin" aria-label="Login"> -->
+                                <input type="hidden" name="_token" value="hidden">
+                                <div class="form-group row">
+                                    <label for="email"
+                                        class="col-sm-4 col-form-label text-md-right">E-MailAddress</label>
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control" name="email" value=""
+                                            required autofocus>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control" name="password"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <a href="forgotpassword">Forgot Your Password?</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember"
+                                                id="remember">
+                                            <label class="form-check-label" for="remember">Remember Me</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn primary">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div id="vregister" class="tab-pane fade">
+                            <form action="ladydocvendor" method="post">
+                                <input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="vname" name="vname"
+                                            ng-model="employee.vname" ng-required="true" placeholder="Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row  error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">Email</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="vemail" name="vemail"
+                                            ng-model="employee.vemail" ng-required="true" placeholder="Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">Phone</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="vphone" name="vphone"
+                                            ng-model="employee.vphone" ng-required="true" placeholder="Phone" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">Business Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="vcompany" name="vcompany"
+                                            ng-model="employee.vcompany" ng-required="true" placeholder="Business Name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group row error">
+                                    <label for="inputEmail3" class="col-sm-4 control-label">Business Category</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control" name="vcategory" required>
+                                            <option value="1">Spa</option>
+                                            <option value="2">Beauty Parlour</option>
+                                            <option value="3">Fitness Center</option>
+                                            <option value="4">Boutique</option>
+                                            <option value="5">Medical Cosmetology</option>
+                                            <option value="6">Ayurveda</option>
+                                            <option value="7">Yoga Center</option>
+                                            <option value="8">Pathology Labs</option>
+                                            <option value="9">Women Gym</option>
+                                            <option value="10">Female Spa</option>
+                                            <option value="11">Female Spa</option>
+                                            <option value="12">Allopathy</option>
+                                            <option value="13">Homeopathy</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">Locality</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="locality" name="locality"
+                                            ng-model="employee.locality" ng-required="true" placeholder="Locality"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">City</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control has-error" id="city" name="city"
+                                            ng-model="employee.city" ng-required="true" placeholder="City" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-4 control-label">GST</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control has-error" id="gst" name="gst"
+                                            ng-model="employee.gst" ng-required="true" placeholder="GST Number"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!--button class="btn btn-primary" id="btn-save" ng-click="save()" ng-disabled="frmEmployees.$invalid">Save</button-->
+                                <input class="btn btn-primary" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clear-all"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal vendorlogin end -->
+    <!-- Modal doctorlogin start -->
+    <div id="doctorlogin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">LadyDoc Doctor Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Log In</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Register</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <br />
+                            <form method="POST" action="doctorlogin" aria-label="Login">
+
+                                <input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail
+                                        Address</label>
+
+                                    <div class="col-md-8">
+                                        <input id="email" type="email" class="form-control" name="email" value=""
+                                            required autofocus>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                                    <div class="col-md-8">
+                                        <input id="password" type="password" class="form-control" name="password"
+                                            required>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <a href="https://www.ladydoc.in/password/reset">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember"
+                                                id="remember">
+
+                                            <label class="form-check-label" for="remember">
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn primary">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <form action="ladydocdoctor" method="post">
+                                <input type="hidden" name="_token" value="hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn">
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="dname" name="dname"
+                                            ng-model="employee.dname" ng-required="true" placeholder="Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="demail" name="demail"
+                                            ng-model="employee.demail" ng-required="true" placeholder="Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Phone</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="dphone" name="dphone"
+                                            ng-model="employee.dphone" ng-required="true" placeholder="Phone" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Doctor Type</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" name="doctortype" required
+                                            style="width:100%; background:#f5efef">
+                                            <option value="allopathy">Allopathy</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Homeopathy">Homeopathy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Qualification.</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="registrationnumber"
+                                            name="registrationnumber" ng-model="employee.registrationnumber"
+                                            ng-required="true" placeholder="MBBS-BHMS-BUMS" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Clinic / Hospital</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="clinic" name="clinic"
+                                            placeholder="Clinic / Hospital" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">City</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control has-error" id="cityid" name="city"
+                                            ng-model="employee.city" ng-required="true" required
+                                            style="width:100%; background:#f5efef">
+                                            <option>Select</option>
+                                            <option value="1">Pune</option>
+                                            <option value="2">Mumbai</option>
+                                            <option value="4">Jamshedpur</option>
+                                            <option value="5">Delhi NCR</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Locality</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control has-error" id="localitydoctorform" name="locality"
+                                            ng-model="employee.locality" ng-required="true" required
+                                            style="width:100%; background:#f5efef">
+                                            <option>select</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">Speciality</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control has-error" id="specialityform" name="speciality"
+                                            ng-model="employee.locality" ng-required="true" required
+                                            style="width:100%; background:#f5efef">
+                                            <option>select</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row error"><label for="inputEmail3"
+                                        class="col-sm-3 control-label">GST</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="gst" name="gst"
+                                            ng-model="employee.gst" ng-required="true" placeholder="GST Number"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!--button class="btn btn-primary" id="btn-save" ng-click="save()" ng-disabled="frmEmployees.$invalid">Save</button-->
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                            </form>
+                        </div>
+                    </div>
+                    <!--form name='frmEmployees' class="form-horizontal" novalidate=""-->
+
+                    <div class="clear-all"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal doctorlogin end -->
+
+
+    <style>
+        #vemodal {
+            position: fixed;
+            background: #ccc;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+        }
+    </style>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <!--script src="https://www.ladydoc.in/node_modules/bootstrap/dist/js/bootstrap.min.js"></script-->
+    <script src="https://www.ladydoc.in/node_modules/angular/angular.min.js"></script>
+    <script src="https://www.ladydoc.in/app/app.js"></script>
+    <script src="https://www.ladydoc.in/app/controllers/employees.js"></script>
+    <script>
+        function myclose() {
+            document.getElementById("vemodal").style.display = "none";
+            //window.location.assign("/")
+            setTimeout(function () {
+                document.getElementById("vemodal").style.display = "none";
+            }, 3000)
+        };
+    </script>
+    <div id="referrer" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LadyDoc Refer url</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function copyToClipboard(element) {
+
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                document.getElementById('codecopy').innerHTML = "Code is Copied to clipboard!";
+                $temp.remove();
+            }
+
+        </script>
+
+    </div>
+
+    <div id="mywallet" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LadyDoc Wallet</h4>
+                </div>
+                <div class="modal-body">
+                    <h5> You Have
+                        Points in your wallet </h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function subscription() {
+            var name = document.getElementById('data_2').value;
+            //if (name='') {
+            //  document.getElementById('nameerror').innerHTML = "NAME is required!";
+            // }
+            if (isEmpty(document.getElementById('data_2').value.trim())) {
+                document.getElementById('nameerror').innerHTML = "NAME is required!";
+                return false;
+            }
+            var email = document.getElementById('data_4').value;
+            if (isEmpty(document.getElementById('data_4').value.trim())) {
+                document.getElementById('emailerror').innerHTML = "EMAIL is required!";
+                return false;
+            }
+            if (!validateEmail(document.getElementById('data_4').value.trim())) {
+                document.getElementById('emailerror').innerHTML = "EMAIL must be a valid email address!";
+
+                return false;
+            }
+
+            function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+            function validateEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                return isEmpty(email) || re.test(email);
+            }
+            //var token = document.getElementById('token').value;
+            //  alert(name);
+            $.ajax({
+                type: 'POST',
+                url: 'subscription',
+                //data:'_token = ','_token = hzkGK8nTf69fx3qAnmxxtH0B6WNGCuxdsxzsnNUn',
+                headers: { 'X-CSRF-TOKEN': $('meta[name=\'token\']').attr('content') },
+
+                data: { name: name, email: email, },
+                success: function (data) {
+                    $("#msg").html(data.msg);
+                    $("#cform")[0].reset();
+                    $("#nameerror").hide();;
+                    $("#emailerror").hide();
+                }
+            });
+        }
+    </script>
+    <script>
+        $("#cityid").change(function () {
+
+
+            //var url = $("#assigntaskForm").attr("data-department");
+            var cityid = $('#cityid').val();
+
+            $.ajax({
+                url: 'https://www.ladydoc.in/getcity',
+                data: {
+                    'cityid': cityid
+                },
+                success: function (data) {
+
+                    $("#localitydoctorform").html(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //console.log(jqXHR);
+                    console.log(jqXHR.responseText);
+                }
+            });
+        });
+    </script>
+    <script>
+        $("#cityidsearch").change(function () {
+            var cityid = $('#cityidsearch').val();
+            $.ajax({
+                url: 'https://www.ladydoc.in/getcity',
+                data: {
+                    'cityid': cityid
+                },
+                success: function (data) {
+                    $("#searchlocalitydoctor").html(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //console.log(jqXHR);
+                    console.log(jqXHR.responseText);
+                }
+            });
+        });
+    </script>
+    <script>
+        $("#searchlocalitydoctor").change(function () {
+            var locality = $('#searchlocalitydoctor').val();
+            $.ajax({
+                url: 'https://www.ladydoc.in/getspeciality',
+                data: {
+                    'locality': locality
+                },
+                success: function (data) {
+                    $("#searchspeciality").html(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //console.log(jqXHR);
+                    console.log(jqXHR.responseText);
+                }
+            });
+        });
+    </script>
+    <script>
+        $("#localitydoctorform").change(function () {
+
+            var locality = $('#localitydoctorform').val();
+            $.ajax({
+                url: 'https://www.ladydoc.in/getspeciality',
+                data: {
+                    'locality': locality
+                },
+                success: function (data) {
+                    $("#specialityform").html(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //console.log(jqXHR);
+                    console.log(jqXHR.responseText);
+                }
+            });
+        });
+    </script>
+
+    <script src="js/app.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+
+        //---------------------video calling----------------//
+
+
+
+        var calleesIds = [56, 76, 34]; // Users' ids
+        var sessionType = QB.webrtc.CallType.VIDEO; // AUDIO is also possible
+        var additionalOptions = {};
+
+        var session = QB.webrtc.createNewSession(calleesIds, sessionType, null, additionalOptions);
+
+        var mediaParams = {
+            audio: true,
+            video: true,
+            options: {
+                muted: true,
+                mirror: true,
+            },
+            elemId: "localVideo",
+        };
+
+        session.getUserMedia(mediaParams, function (error, stream) {
+            if (error) {
+            } else {
+            }
+        });
+
+        session.attachMediaStream('myVideoElementId', stream);
+
+        var extension = {};
+        session.call(extension, function (error) {
+
+        });
+
+        QB.webrtc.onCallListener = function (session, extension) {
+
+            // if you are going to take a call  
+            session.getUserMedia(mediaParams, function (error, stream) {
+                if (error) {
+                } else {
+                    //run accept function here
+                }
+            });
+
+        };
+
+        var extension = {};
+        session.accept(extension);
+
+        QB.webrtc.onAcceptCallListener = function (session, userId, extension) {
+
+        };
+
+        QB.webrtc.onRemoteStreamListener = function (session, userID, remoteStream) {
+            // attach the remote stream to DOM element
+            session.attachMediaStream("remoteOpponentVideoElementId", remoteStream);
+        };
+        //---------------------------------------------------//
+
+        $(document).ready(function () {
+
+            $('#txtSearch').on('keyup', function () {
+
+                var text = $('#place').val();
+
+                $.ajax({
+
+                    type: "Post",
+                    url: '/search',
+                    data: { text: $('#txtSearch').val() },
+                    success: function (data) {
+
+                        console.log(data);
+
+                    }
+
+
+
+                });
+
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
