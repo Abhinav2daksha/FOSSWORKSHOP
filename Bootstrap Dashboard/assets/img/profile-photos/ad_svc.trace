@@ -1,0 +1,206 @@
+ * * * * * * * * * * * * * * * * * *
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * AnyDesk Windows Startup *
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * Version 7.0.4 (release/win_7.0.x c98cd863fe81cb91ab4537e5a8e97f522400d7d9)
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * Custom Client (no ID)
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * Checksum 9384e22fb4a4faeb4ae602db66748b83
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * Build 20211119165336
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - * Copyright (C) 2021 AnyDesk Software GmbH *
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - 
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                                  main - Process started at 2021-12-04. PID 11996. OS is Windows 10 (64 bit)
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748                         impl_selector - using sse2 (intrinsics)
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748          base.data.config_application - Adding GPO defaults layer.
+   info 2021-12-04 02:56:11.209       gsvc  11996   9748          base.data.config_application - Adding GPO overrides layer.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228                  fiber.global_service - Entered the services main thread.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228                       fiber.scheduler - Spawning root fiber 1.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228                       fiber.scheduler - Scheduler started.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Opening the IPC namespace.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1              fiber.ipc_namespace - Global: yes
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Logging into the IPC namespace.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Starting to supervise the IPC namespace.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Starting the connector.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1            anynet.connection_mgr - Importing certificate and key.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1            anynet.connection_mgr - 2 CA certificate(s) loaded.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 2.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 3.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Opening listen port.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 4.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Setting up the listen sockets.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 5.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Service startup completed.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1            app.discovery_manager - Updated Discovery settings: repeat interval (1000), repeat limit (10), buffer interval (5000), port range (3)
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1            app.discovery_manager - Starting Discovery.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                   ad.wol_service - Starting WOL service.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 6 (parent 1).
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 7 (parent 1).
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    1                      app.service - Waiting for messages.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    2            anynet.connection_mgr - Starting connection manager fiber.
+   info 2021-12-04 02:56:11.225       gsvc  11996  16228    3           anynet.main_relay_conn - Starting main relay connection.
+   info 2021-12-04 02:56:11.241       gsvc  11996  19616                    os_win.firewall_if - Adding AnyDesk to the firewall rules.
+   info 2021-12-04 02:56:11.256       gsvc  11996  16228    3                  fiber.scheduler - Spawning child fiber 8 (parent 3).
+   info 2021-12-04 02:56:11.256       gsvc  11996  16228    4              anynet.tcp_acceptor - Listening on TCP port 7070.
+   info 2021-12-04 02:56:11.256       gsvc  11996  14412                   anynet.tcp_acceptor - Attempting UPnP forwarding to port 7070.
+   info 2021-12-04 02:56:11.256       gsvc  11996  16228    5                anynet.any_socket - Listen fiber started.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    1                      app.service - Received connectivity update (3).
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    3           anynet.main_relay_conn - Reconnecting due to connectivity change (3).
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228                       fiber.scheduler - Fiber 3 requested quit of fiber 8.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    8           anynet.relay_connector - Relay connector started.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    8                      fiber.fiber - Received quit.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228                       fiber.scheduler - Fiber 8 terminated.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    3                  fiber.scheduler - Spawning child fiber 9 (parent 3).
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    9           anynet.relay_connector - Relay connector started.
+   info 2021-12-04 02:56:11.278       gsvc  11996  16228    9           anynet.relay_connector - Connecting to relay relay-7fc5252b.net.anydesk.com (1/2)
+  error 2021-12-04 02:56:11.294       gsvc  11996  21748                     base.proxy_finder - WinHttpGetProxyResult failed (00002ef3).
+warning 2021-12-04 02:56:11.325       gsvc  11996  14412                    os_win.upnp_config - No port mapping collection (0x00000000).
+warning 2021-12-04 02:56:11.341       gsvc  11996  14412                    os_win.upnp_config - No port mapping collection (0x00000000).
+   info 2021-12-04 02:56:11.341       gsvc  11996  14412                   anynet.tcp_acceptor - UPnP forwarding failed.
+   info 2021-12-04 02:56:11.430       gsvc  11996  16228    9           anynet.relay_connector - Using IPv4: 138.199.14.85
+   info 2021-12-04 02:56:11.472       gsvc  11996  19616                  win_app.firewall_mgr - Success.
+   info 2021-12-04 02:56:12.128       gsvc  11996  16228    9                  fiber.scheduler - Spawning root fiber 10.
+   info 2021-12-04 02:56:12.341       gsvc  11996  16228    1                      app.service - Process start: 23528 (control:6).
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228    1                      app.service - New IPC connection.
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 11 (parent 1).
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228   11                      app.service - Creating an IPC accept socket.
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228   11                      app.service - Connected to 23528 (control:6).
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228   11                      app.service - Process login detected.
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228   11                      app.service - Using existing control (23528).
+   info 2021-12-04 02:56:12.347       gsvc  11996  16228   11                  fiber.scheduler - Spawning child fiber 12 (parent 11).
+   info 2021-12-04 02:56:12.626       gsvc  11996  16228    9           anynet.relay_connector - Cipher: ECDHE-ECDSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=ECDSA Enc=AESGCM(256) Mac=AEAD
+   info 2021-12-04 02:56:12.642       gsvc  11996  16228    9                  fiber.scheduler - Spawning root fiber 13.
+   info 2021-12-04 02:56:12.642       gsvc  11996  16228    9                        handshake - Using protocol version 3.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228                       fiber.scheduler - Fiber 9 requested quit of fiber 13.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228   13                      fiber.fiber - Received quit.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228                       fiber.scheduler - Fiber 13 terminated.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228                       fiber.scheduler - Fiber 9 requested quit of fiber 10.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228   10                      fiber.fiber - Received quit.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228                       fiber.scheduler - Fiber 10 terminated.
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228    9           anynet.relay_connector - Connection terminated: anynet_relay_full
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228    9           anynet.relay_connector - Received a new server list (10 servers)
+   info 2021-12-04 02:56:12.972       gsvc  11996  16228    9           anynet.relay_connector - Connecting to relay relay-d86998fb.net.anydesk.com (1/10)
+   info 2021-12-04 02:56:13.103       gsvc  11996  16228    9           anynet.relay_connector - Using IPv4: 168.119.147.174
+   info 2021-12-04 02:56:13.357       gsvc  11996  16228    9                  fiber.scheduler - Spawning root fiber 14.
+   info 2021-12-04 02:56:13.638       gsvc  11996  16228    1                      app.service - Process start: 13024 (frontend).
+   info 2021-12-04 02:56:13.638       gsvc  11996  16228    1           anynet.relay_connector - Short timeouts enabled.
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228    1                      app.service - New IPC connection.
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 15 (parent 1).
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228   15                      app.service - Creating an IPC accept socket.
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228   15                      app.service - Connected to 13024 (frontend).
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228   15                      app.service - Process login detected.
+   info 2021-12-04 02:56:13.646       gsvc  11996  16228   15                  fiber.scheduler - Spawning child fiber 16 (parent 15).
+   info 2021-12-04 02:56:13.890       gsvc  11996  16228    9           anynet.relay_connector - Cipher: ECDHE-ECDSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=ECDSA Enc=AESGCM(256) Mac=AEAD
+   info 2021-12-04 02:56:13.890       gsvc  11996  16228    9                  fiber.scheduler - Spawning root fiber 17.
+   info 2021-12-04 02:56:13.892       gsvc  11996  16228    9                        handshake - Using protocol version 3.
+   info 2021-12-04 02:56:14.248       gsvc  11996  16228    9           anynet.relay_connector - Connection established.
+   info 2021-12-04 02:56:14.248       gsvc  11996  16228    9           anynet.relay_connector - Relay connector stopped.
+   info 2021-12-04 02:56:14.248       gsvc  11996  16228                       fiber.scheduler - Fiber 9 terminated.
+   info 2021-12-04 02:56:14.268       gsvc  11996  16228    3           anynet.main_relay_conn - Network ID: main
+   info 2021-12-04 02:56:14.268       gsvc  11996  16228    3                anynet.relay_conn - External address: 182.70.31.202:3599.
+   info 2021-12-04 02:56:14.268       gsvc  11996  16228    3           anynet.main_relay_conn - Main relay ID: d86998fb
+   info 2021-12-04 02:56:14.288       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 18.
+   info 2021-12-04 02:56:14.288       gsvc  11996  16228    2            anynet.connection_mgr - Main relay connection established.
+   info 2021-12-04 02:56:14.288       gsvc  11996  16228    2            anynet.connection_mgr - New user data. Client-ID: 253129029.
+   info 2021-12-04 02:56:14.288       gsvc  11996  16228   18                  app.auto_update - Checking for update (channel: stable).
+   info 2021-12-04 02:56:14.288       gsvc  11996  16228   18                  app.auto_update - Skipping check for update due to user activity.
+   info 2021-12-04 02:56:14.299       gsvc  11996  16228   15           anynet.main_relay_conn - Reporting system information.
+   info 2021-12-04 02:56:14.604       gsvc  11996  16228    1                    app.discovery - Starting.
+   info 2021-12-04 02:56:14.604       gsvc  11996  16228    1                  fiber.scheduler - Spawning root fiber 19.
+   info 2021-12-04 02:56:14.604       gsvc  11996  16228   19                    app.discovery - Current Discovery revision: 0
+   info 2021-12-04 02:56:14.619       gsvc  11996  16228   19                    app.discovery - Joined multicast group 239.255.102.18:50001.
+   info 2021-12-04 02:56:14.619       gsvc  11996  16228   19                    app.discovery - Bound to port: 50001
+   info 2021-12-04 02:56:14.619       gsvc  11996  16228   19                anynet.udp_socket - Multicast loop option set to 0
+   info 2021-12-04 02:56:14.635       gsvc  11996  16228   19                    app.discovery - Discovery fiber started.
+   info 2021-12-04 02:56:14.967       gsvc  11996  16228   15                            gcpsa - Downloading gcapi.dll.
+   info 2021-12-04 02:56:14.967       gsvc  11996  16228   11                      app.service - 5 Unexpected: packet_msg_t.
+  error 2021-12-04 02:56:15.221       gsvc  11996  16228   15                 win_app.dir_file - Could not open file (2).
+   info 2021-12-04 02:56:15.221       gsvc  11996  16228   15                  fiber.scheduler - Spawning child fiber 20 (parent 15).
+   info 2021-12-04 02:56:15.237       gsvc  11996  16228   15                      app.service - 5 Unexpected: packet_msg_t.
+   info 2021-12-04 02:56:17.691       gsvc  11996  16228                       fiber.scheduler - Fiber 20 terminated.
+   info 2021-12-04 02:56:17.713       gsvc  11996  16228   11                  fiber.scheduler - Spawning child fiber 21 (parent 11).
+   info 2021-12-04 02:56:18.747       gsvc  11996  16228                       fiber.scheduler - Fiber 21 terminated.
+   info 2021-12-04 02:56:42.365       gsvc  11996  16228    1                      app.service - Process start: 10388 (frontend).
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228    1                      app.service - New IPC connection.
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 22 (parent 1).
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228   22                      app.service - Creating an IPC accept socket.
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228   22                      app.service - Connected to 10388 (frontend).
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228   22                      app.service - Process login detected.
+   info 2021-12-04 02:56:42.381       gsvc  11996  16228   22                  fiber.scheduler - Spawning child fiber 23 (parent 22).
+   info 2021-12-04 02:56:43.268       gsvc  11996  16228   22                            gcpsa - Downloading gcapi.dll.
+   info 2021-12-04 02:56:43.515       gsvc  11996  16228   22               app.fib_downloader - Canceled download of 'gcapi.dll'. A file with matching hash already exists in C:\Windows\TEMP.
+  error 2021-12-04 02:56:43.653       gsvc  11996  16228   22                            gcpsa - Failed to delete file. (0x00000004 'io_access_denied')
+warning 2021-12-04 02:56:43.653       gsvc  11996  16228   22                            gcpsa - Could not write file. (0x00000004)
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228   22                      app.service - IPC socket closed.
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228                       fiber.scheduler - Fiber 22 requested quit of fiber 23.
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228   23                      fiber.fiber - Received quit.
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228                       fiber.scheduler - Fiber 23 terminated.
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228   22                      app.service - Fiber exit (ipc).
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228                       fiber.scheduler - Fiber 22 terminated.
+   info 2021-12-04 02:56:53.345       gsvc  11996  16228    1                      app.service - Process stop: 10388.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228   15                      app.service - IPC socket closed.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228                       fiber.scheduler - Fiber 15 requested quit of fiber 16.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228   16                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228                       fiber.scheduler - Fiber 16 terminated.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228   15                      app.service - Fiber exit (ipc).
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228                       fiber.scheduler - Fiber 15 terminated.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228    1                      app.service - Process stop: 13024.
+   info 2021-12-04 02:57:22.798       gsvc  11996  16228    1           anynet.relay_connector - Short timeouts disabled.
+   info 2021-12-04 02:57:27.797       gsvc  11996  16228    1                      app.service - Process start: 12140 (frontend).
+   info 2021-12-04 02:57:27.797       gsvc  11996  16228    1           anynet.relay_connector - Short timeouts enabled.
+   info 2021-12-04 02:57:27.797       gsvc  11996  16228    1                      app.service - New IPC connection.
+   info 2021-12-04 02:57:27.813       gsvc  11996  16228    1                  fiber.scheduler - Spawning child fiber 24 (parent 1).
+   info 2021-12-04 02:57:27.813       gsvc  11996  16228   24                      app.service - Creating an IPC accept socket.
+   info 2021-12-04 02:57:27.813       gsvc  11996  16228   24                      app.service - Connected to 12140 (frontend).
+   info 2021-12-04 02:57:27.813       gsvc  11996  16228   24                      app.service - Process login detected.
+   info 2021-12-04 02:57:27.813       gsvc  11996  16228   24                  fiber.scheduler - Spawning child fiber 25 (parent 24).
+   info 2021-12-04 02:57:28.537       gsvc  11996  16228   24                            gcpsa - Downloading gcapi.dll.
+   info 2021-12-04 02:57:28.800       gsvc  11996  16228   24               app.fib_downloader - Canceled download of 'gcapi.dll'. A file with matching hash already exists in C:\Windows\TEMP.
+  error 2021-12-04 02:57:28.816       gsvc  11996  16228   24                            gcpsa - Failed to delete file. (0x00000004 'io_access_denied')
+warning 2021-12-04 02:57:28.816       gsvc  11996  16228   24                            gcpsa - Could not write file. (0x00000004)
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228   24                      app.service - IPC socket closed.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228                       fiber.scheduler - Fiber 24 requested quit of fiber 25.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228   25                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228                       fiber.scheduler - Fiber 25 terminated.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228   24                      app.service - Fiber exit (ipc).
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228                       fiber.scheduler - Fiber 24 terminated.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228    1                      app.service - Process stop: 12140.
+   info 2021-12-04 02:57:32.599       gsvc  11996  16228    1           anynet.relay_connector - Short timeouts disabled.
+   info 2021-12-04 02:57:57.633       gsvc  11996   9748                  fiber.global_service - Received a stop request.
+   info 2021-12-04 02:57:57.633       gsvc  11996   9748                       fiber.scheduler - Quitting scheduler (0).
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228                       fiber.scheduler - Quitting all fibers.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    1                      app.service - Service shutdown.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    1                    app.discovery - Stopping.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228                       fiber.scheduler - Fiber 1 requested quit of fiber 19.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    2            anynet.connection_mgr - Connection manager fiber quit.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228                       fiber.scheduler - Fiber 2 terminated.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    4              anynet.tcp_acceptor - Received quit.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228                       fiber.scheduler - Fiber 4 terminated.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    5                anynet.any_socket - Listen fiber stopped.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228                       fiber.scheduler - Fiber 5 terminated.
+   info 2021-12-04 02:57:57.633       gsvc  11996  16228    3           anynet.main_relay_conn - Main relay connection closed.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228    3            anynet.connection_mgr - Forcing cleanup.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228                       fiber.scheduler - Fiber 3 requested quit of fiber 17.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228   14                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228                       fiber.scheduler - Fiber 14 terminated.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228   17                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228                       fiber.scheduler - Fiber 17 terminated.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228   18                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:57.655       gsvc  11996  16228                       fiber.scheduler - Fiber 18 terminated.
+   info 2021-12-04 02:57:57.671       gsvc  11996  16228   19                    app.discovery - Left multicast group 239.255.102.18:50001.
+   info 2021-12-04 02:57:57.671       gsvc  11996  16228   19                    app.discovery - Discovery fiber stopped.
+   info 2021-12-04 02:57:57.671       gsvc  11996  16228                       fiber.scheduler - Fiber 19 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 3 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 1 requested quit of fiber 6.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 6 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 1 requested quit of fiber 7.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 7 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 1 requested quit of fiber 11.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 11 requested quit of fiber 12.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228   12                      fiber.fiber - Received quit.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 12 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228   11                      app.service - Fiber exit (ipc).
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 11 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228    1            anynet.connection_mgr - Connection manager shutdown.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228    1                  fiber.scheduler - Quitting scheduler (0).
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Fiber 1 terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - All fibers terminated.
+   info 2021-12-04 02:57:57.686       gsvc  11996  16228                       fiber.scheduler - Scheduler stopped (0).
+warning 2021-12-04 02:57:57.686       gsvc  11996   9748                            temp_files - Could not delete file 'C:\Program Files (x86)\AnyDesk\gcapi.dll' (io_access_denied)
+   info 2021-12-04 02:57:57.686       gsvc  11996   9748                                  main - Terminated.
