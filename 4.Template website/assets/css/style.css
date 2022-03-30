@@ -1,0 +1,31 @@
+.logo {
+    height: 200px;
+    width: 200px;
+    top: 0;
+    position: fixed;
+}
+
+.nav {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    text-decoration: none;
+}
+
+.navbar-collapse {
+    position: absolute;
+    top: 10%;
+}
+
+.navbar-brand img {
+    text-align: left;
+    position: absolute;
+    transform: translate(-50%);
+    top: 10%;
+}
+
+.img-fluid {
+    height: 200px;
+    width: 200px;
+    padding-left: 50px;
+}
